@@ -1,0 +1,8 @@
+<h1>Here are the available articles</h1>
+<hr/>
+
+<% @pdfs.each do |pdf| %>
+  <h2><%= pdf.title %></h2>
+  <p><%= pdf.author %></p>
+  <p><%= link_to "Download PDF", pdf.attachment_url if pdf.attachment_url %></p>
+<% end %>
